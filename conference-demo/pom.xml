@@ -57,6 +57,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- This configuration will make the .jar packaged
+					 file an executable that will run in mac or linux with ./file.jar
+					 Unfortunately, it won't run in windows -->
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
